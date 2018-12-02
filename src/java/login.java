@@ -7,10 +7,12 @@
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.*;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  *
@@ -35,67 +37,58 @@ public class login extends HttpServlet {
          boolean flag=false;
         long ad=0,vt=0;
         
-         try
-        {
-            Class.forName("com.mysql.cj.jdbc.Driver");
+         
+           
+                                  
+        
+       
+        try (PrintWriter out = response.getWriter()) {
+             Class.forName("com.mysql.cj.jdbc.Driver");
             Connection conn=DriverManager.getConnection("jdbc:mysql://localhost/votesystem?useSSL=false","root","nehasharma1481");
            Statement stmt=conn.createStatement();
            PreparedStatement ps = conn.prepareStatement("select * from signup where adhar=? and voter=?");
            ps.setString(1,a);
            ps.setString(2, v);
            ResultSet rs=ps.executeQuery();
-          
-          
            
-                   if(rs.next())
-                   {
-//                       yahan par har row par getInt and getString se columns ki value utha lo
-//                               like
-                                   //First column k liye
-                       flag=true;
-                                    
-                  // ab is loop m har row p columns se value nikaalti jaao aur jo krna hai wo karlo saath
-                         //  Smjhi?
-                
-                   }
-         //response.sendRedirect("abc.html");
-                                     
-        }
-                                       
-                   
+           
+             
         
-                  // ab is loop m har row p columns se value nikaalti jaao aur jo krna hai wo karlo saath
-                         //  Smjhi?
-                
-         
-        
-        catch(Exception e)
-        {
-                 System.out.println(e);   
-        }
-       
-        try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet login</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            if(flag==true)
+            if(rs.next())
             {
                 out.println("<p>you are loged in </p>");
+                HttpSession session=request.getSession();
+                session.setAttribute("voter",v);
+                
+                session.setMaxInactiveInterval(30*60);
+                RequestDispatcher rd=request.getRequestDispatcher("options.html");
+                rd.forward(request, response);
+                  
             }
             else
             {
-                out.println("<p>you are not loged in<br> please enter correct password </p>");
+             out.println("<h1>Enter correct adhar and voter id!</h1>");
             }
-            out.println("<h1>hi</h1>");
-            response.sendRedirect("1.html");
+            
+        }
+        catch(Exception e)
+        {
+            System.out.println(e);
+        }
+        try (PrintWriter out = response.getWriter()) {
+            /* TODO output your page here. You may use following sample code. */
+            out.println("<!DOCTYPE html>");
+            out.println("<html>"); 
+            out.println("<head>");
+            out.println("<title>Servlet signup</title>");            
+            out.println("</head>");
+            out.println("<body>");
+            
             out.println("</body>");
             out.println("</html>");
         }
     }
+    
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**

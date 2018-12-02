@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.bg-image {
+  /* The image used */
+  background-image: url("image1/Parliament_reuters.jpg");
+  
+  /* Add the blur effect */
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  
+  /* Full height */
+  height: 60%; 
+  
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Position text in the middle of the page/image */
+.bg-text {
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+  color: white;
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 80%;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: black;
+   color: white;
+   text-align: center;
+}
+
+</style>
+</head>
+<body>
+ 
+    <nav class="navbar navbar-inverse">
+  <ul class="nav navbar-nav">
+<li><a href="index_mine.html"><font color="white">Home</font></a></li>
+      <li><a href="loginhtml.html"><font color="white">Login</font></a></li>
+    <li><a href="signuphtml.html"><font color="white">Signup</font></a></li>
+<li><a href="about.html"><font color="white">About Us</font></a></li>
+<li><a href="feed.html"><font color="white">Feedback</font></a></li>
+  </ul>
+
+</nav>
+<div class="bg-image"></div>
+
+<div class="bg-text">
+  <h2>Online Voting Platform</h2>
+  <h1 style="font-size:50px"><font face="Lucida Handwriting"><i>We make vote easy</i></font></h1>
+<form>
+<input style="width: 200px; padding: 10px; cursor: pointer; -moz-box-shadow: 6px 6px 5px white; font-weight: bold; background: brown; color: white; border-radius: 10px; border: 1px solid white; font-size: 100%;" type="button" value="Login to vote!!!" onclick="window.location.href='loginhtml.html'" />
+</form>
+</div>
+
+<div class="footer">
+  <p>WE LOVE DEMOCRACY</p>
+
+
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a href="wwww.facebook.com"><img src="image1/pic4.jpg" width="20px" height="20px"><img src="image1/pic5.png" width="20px" height="20px"></a>
+</div>
+</body>
+</html>

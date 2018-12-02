@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+body {font-family: Arial, Helvetica, sans-serif;}
+
+body  {
+    background-image: url("image1/s2.jpg");
+     background-position: fixed;
+     background-repeat: no-repeat;
+    background-size: 100% 193%;
+    
+}
+form {border: 3px solid #f1f1f1 width:30px;}
+input[type=text], input[type=text] {
+    width: 60%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #117a8b;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 15%;
+    
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.cancelbtn {
+    width: auto;
+    padding: 8px 10px;
+    background-color: blue;
+}
+
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+}
+
+img.avatar {
+    width: 40%;
+    border-radius: 50%;
+}
+
+.container {
+    padding: 16px;
+     width:50%;
+}
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+}
+</style>
+    </head>
+    <body>
+    <center>
+         <h2><font color="white">Feedback Form</font></h2>
+        <form action="feed" method="get">
+
+
+  <div class="container">
+    <label for="name"><b>Name</b></label>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+    <input type="text" placeholder="Enter Name" name="name" required>
+    <br>
+
+    <label for="email"><b>Email</b></label>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+    <input type="text" placeholder="Enter Email" name="email" required >
+    <br>
+   
+     <label for="msg"><b>Message</b></label>
+      <textarea name="message" rows="10" cols="45" required></textarea>  
+    <center>
+    <button type="submit">Submit</button><br>
+    <label>
+      <input type="checkbox" checked="checked" name="remember"> Remember me
+    </label>
+    </center>
+  </div>
+        </form></center>
+    </body>
+</html>

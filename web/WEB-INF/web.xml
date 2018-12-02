@@ -5,8 +5,20 @@
         <servlet-class>login</servlet-class>
     </servlet>
     <servlet>
+        <servlet-name>feed</servlet-name>
+        <servlet-class>feed</servlet-class>
+    </servlet>
+    <servlet>
         <servlet-name>signup</servlet-name>
         <servlet-class>signup</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>one</servlet-name>
+        <servlet-class>one</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>vote</servlet-name>
+        <servlet-class>vote</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>login</servlet-name>
@@ -15,6 +27,10 @@
     <servlet-mapping>
         <servlet-name>signup</servlet-name>
         <url-pattern>/signup</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>vote</servlet-name>
+        <url-pattern>/vote</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

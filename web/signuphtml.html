@@ -1,66 +1,113 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
-
 <html>
-    <head>
-        <title>TODO supply a title</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <style>
-        .button {
-    background-color:white; /* Green */
-    border: none;
-    color: black;
-     border: 2px solid;
-    border-radius: 5px;
-    padding: 8px 110px;
-    text-align: center;
-    text-decoration: none;
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+
+body  {
+    background-image: url("image1/pic3.jpg");
+     background-position: fixed;
+     background-repeat: no-repeat;
+    background-size: 100% 193%;
+    
+}
+form {border: 3px solid #f1f1f1 width:30px;}
+input[type=text], input[type=text],input[type=text] ,input[type=text] ,input[type=text] ,input[type=text] ,input[type=text] ,input[type=text] {
+    width: 60%;
+    padding: 12px 20px;
+    margin: 8px 0;
     display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: blue;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
     cursor: pointer;
+    width: 15%;
+    
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.cancelbtn {
+    width: auto;
+    padding: 8px 10px;
+    background-color: blue;
+}
+
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+}
+
+img.avatar {
+    width: 40%;
+    border-radius: 50%;
+}
+
+.container {
+    padding: 16px;
+     width:50%;
+}
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
 }
 </style>
-    </head>
-    
-       <body bgcolor="black">
-       <center><font color="white" size="7"><i>Signup</i></font>
-           <form action="signup" method="post">
-           <table style="width:20%" bgcolor="white">
-               <br>
-  <tr>
-    <td><br>Name &nbsp  &nbsp  <input type="text" name="name" required><br><br></td>
-    
-  </tr>
-  <tr>
-    <td> Age  &nbsp &nbsp  &nbsp     <input type="text" name="age" required><br><br></td>
-    
-  </tr>
-  <tr>
-    <td>    Gender <br>
-               &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="radio" name="gender" value="male"> Male<br>
-               &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="radio" name="gender" value="female"> Female<br>
-               &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="radio" name="gender" value="other"> Other<br><br></td>
+</head>
+<body>
+<center>
+    <h2><font color="white">Sign Up</font></h2>
+
+<form action="signup" method="get">
+
+
+  <div class="container">
+<label for="name"><b>Name</b></label>
+    <input type="text" placeholder="Enter Name" name="name"required >
+    <br>
+<label for="age"><b>Age</b></label>
+    <input type="text" placeholder="Enter Age" name="age"required >
+    <br>
+    <label for="DOB"><b>DOB</b></label>
+    <input type="text" placeholder="Enter DOB" name="DOB" required>
+    <br>
+    <label for="Gender" ><b>Gender</b></label>
+     &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+     <br><input type="radio" name="gender" value="male" required> Male<br>
+  &nbsp&nbsp&nbsp&nbsp<input type="radio" name="gender" value="female" required> Female<br>
+  <input type="radio" name="gender" value="other" required> Other<br> 
+ 
+     
+     
    
-  </tr>
-   <tr>
-    <td>DOB &nbsp&nbsp&nbsp&nbsp<input type="text" name="DOB" required><br><br> </td>
-    
-  </tr>
-   <tr>
-    <td> Address <input type="text" name="address" required><br><br> </td>
-                        
-    
-  </tr>
-  <tr>
-    <td>State/Ut 
-        <select name="state" required >
-  <option value="">__Select State__</option>
+    <label for="address"><b>Address</b></label>
+    <input type="text" placeholder="Enter Address" name="address" required><br>
+        
+   <label for="state" ><b>State/UT</b></label> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+   <br><select name="state" required >
+   <option value="">__Select State/UT__</option>
   <option value="Andhra Pradesh">Andhra Pradesh</option>
         <option value=" Arunachal Pradesh">Arunachal Pradesh</option>
          <option value="Assam">Assam</option>	
@@ -89,23 +136,28 @@ and open the template in the editor.
 	<option value="Tripura">Tripura</option>	
 	<option value="Uttar Pradesh">Uttar Pradesh</option>	
 	<option value="Uttarakhand">Uttarakhand</option>	
-	<option value="West Bengal">West Bengal</option>	
+	<option value="West Bengal">West Bengal</option>
+        <option value="Chandigarh">Chandigarh</option>
+        <option value="Andaman and Nicobar Island">Andaman and Nicobar Island</option>
+        <option value="Dadra and Nagar Haveli">Dadra and Nagar Haveli</option>
+         <option value="Daman and Diu">Daman and Diu</option>
+          <option value="Delhi">Delhi</option>
+           <option value="Lakshadweep">Lakshadweep</option>
+         <option value="Puducherry">Puducherry</option>
         </select>
-    </td>
+    <br>
+    <label for="adhar"><b>Adhar No.</b></label>
+    <input type="text" placeholder="Enter Adhar No." name="adhar"required >
+    <br>
+<label for="voter"><b>Voter ID</b></label>
+    <input type="text" placeholder="Enter Voter ID" name="voter" required>
+    <br>
+    <center>
+    <button type="submit">signup</button><br>
     
-  </tr><br><br>
-  <tr>
-    <td><br>AdharNo <input type="text" name="adhar" required><br><br></td>
-    
-  </tr>
-  <tr>
-    <td>Voter id <input type="text" name="voter" required><br><br></td>
-    
-  </tr>
-           </table>
-   
-        <input type="submit" value="submit" class="button">
-         </form>
-           <br></center>
-    </body>
+    </center>
+  </div>
+</form>
+</center>
+</body>
 </html>

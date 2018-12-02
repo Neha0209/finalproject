@@ -37,9 +37,9 @@ public class signup extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
+       //response.sendRedirect("loginhtml.html");
         String n=request.getParameter("name");
-        //Let me show you the other way
-       // int ag=Integer.parseInt(request.getParameter("age"));
+        
         String a=request.getParameter("age");
         String d=request.getParameter("DOB");
         
@@ -66,11 +66,8 @@ public class signup extends HttpServlet {
             Class.forName("com.mysql.cj.jdbc.Driver");
             Connection conn=DriverManager.getConnection("jdbc:mysql://localhost/votesystem?useSSL=false","root","nehasharma1481");
            Statement stmt=conn.createStatement();
-            PreparedStatement pstmt=conn.prepareStatement("INSERT INTO signup VALUES(?,?,?,?,?,?,?,?)");
+            PreparedStatement pstmt=conn.prepareStatement("INSERT INTO signup VALUES(?,?,?,?,?,?,?,?,?)");
             pstmt.setString(1,n);
-            //pstmt.setInt(3,ag);
-            //Smjhi?
-         
             pstmt.setInt(2, Integer.parseInt(a));
             pstmt.setString(3, gen);
             pstmt.setString(4, d);
@@ -78,6 +75,7 @@ public class signup extends HttpServlet {
                 pstmt.setString(6, state);
                   pstmt.setString(7, adhar);
                     pstmt.setString(8, voter);
+                     pstmt.setInt(9,0);
             pstmt.executeUpdate();
             
         }
